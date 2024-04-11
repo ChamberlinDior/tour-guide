@@ -1,0 +1,12 @@
+com\openclassrooms\tourguide\TourguideApplication.class
+com\openclassrooms\tourguide\service\TourGuideService$1.class
+com\openclassrooms\tourguide\service\RewardsService.class
+com\openclassrooms\tourguide\config\TourGuideModule.class
+com\openclassrooms\tourguide\model\UserReward.class
+com\openclassrooms\tourguide\controller\TourGuideController.class
+com\openclassrooms\tourguide\helper\InternalTestHelper.class
+com\openclassrooms\tourguide\model\UserPreferences.class
+com\openclassrooms\tourguide\service\TourGuideService.class
+com\openclassrooms\tourguide\tracker\Tracker.class
+com\openclassrooms\tourguide\model\User.class
+com\openclassrooms\tourguide\model\NearbyAttraction.class
