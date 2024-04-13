@@ -14,6 +14,9 @@ import com.openclassrooms.tourguide.model.User;
 /**
  * Cette classe est responsable du suivi continu de la localisation des utilisateurs.
  */
+//Le Tracking devra être optimisé et être asynchrone, afin d’atteindre 100 000 emplacements dans un
+//délai de 15 minutes (via la librairie gpsUtil), ainsi qu’une mise à jour des Rewards avec l’attribution
+//de 100 000 récompenses en moins de 20 minutes (via la librairie RewardsCentral).
 public class Tracker extends Thread {
 	private Logger logger = LoggerFactory.getLogger(Tracker.class);
 	private static final long trackingPollingInterval = TimeUnit.MINUTES.toSeconds(5);
