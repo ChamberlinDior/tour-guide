@@ -128,6 +128,10 @@ public class TourGuideService {
 	 * @param user L'utilisateur pour lequel obtenir les offres de voyage.
 	 * @return La liste des offres de voyage disponibles pour l'utilisateur.
 	 */
+
+	//Le Tracking devra être optimisé et être asynchrone, afin d’atteindre 100 000 emplacements dans un
+	//délai de 15 minutes (via la librairie gpsUtil), ainsi qu’une mise à jour des Rewards avec l’attribution
+	//de 100 000 récompenses en moins de 20 minutes (via la librairie RewardsCentral).
 	public List<Provider> getTripDeals(User user) {
 		int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -> i.getRewardPoints()).sum();
 		List<Provider> providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(),
