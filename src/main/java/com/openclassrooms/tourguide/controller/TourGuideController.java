@@ -42,12 +42,16 @@ public class TourGuideController {
     @RequestMapping("/getLocation") 
     public VisitedLocation getLocation(@RequestParam String userName) {
     	return tourGuideService.getUserLocation(getUser(userName));
+
+        //http://localhost:9080/getLocation?userName=internalUser50
     }
     // Endpoint pour obtenir les attractions à proximité d'un utilisateur par son nom d'utilisateur
     @RequestMapping("/getNearbyAttractions") 
     public List<NearbyAttraction> getNearbyAttractions(@RequestParam String userName) {
     	VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
     	return tourGuideService.getFiveNearestAttractions(visitedLocation, getUser(userName));
+
+        // http://localhost:9080/getNearbyAttractions?userName=internalUser50
     }
     // Endpoint pour obtenir les récompenses d'un utilisateur par son nom d'utilisateur
 
@@ -55,6 +59,7 @@ public class TourGuideController {
     @RequestMapping("/getRewards") 
     public List<UserReward> getRewards(@RequestParam String userName) {
     	return tourGuideService.getUserRewards(getUser(userName));
+   //http://localhost:9080/getRewards?userName=internalUser50
     }
     // Endpoint pour obtenir les offres de voyage pour un utilisateur par son nom d'utilisateur
     @RequestMapping("/getTripDeals")
@@ -66,5 +71,5 @@ public class TourGuideController {
     	return tourGuideService.getUser(userName);
     }
    
-
+// http://localhost:9080/getTripDeals?userName=internalUser50
 }

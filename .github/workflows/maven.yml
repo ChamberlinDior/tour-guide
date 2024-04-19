@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline //  Définit le nom du pipeline.
 
 on:
   push:
